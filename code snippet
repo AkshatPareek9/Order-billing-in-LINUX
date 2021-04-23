@@ -1,0 +1,21 @@
+for (i=0;i<nop-1;i++)
+	{	
+    for (j = i+1; j < nop; j++)
+		{	
+      if (s[j].nog>s[i].nog)
+			{	
+        //gift order
+				temp1=s[i].nog;
+				s[i].nog=s[j].nog;
+				s[j].nog=temp1;
+				//process time order
+				temp1=s[i].pt;
+				s[i].pt=s[j].pt;
+				s[j].pt=temp1;
+				//process name order
+				strcpy(temp,s[i].p);
+				strcpy(s[i].p,s[j].p);
+				strcpy(s[j].p,temp);
+	    }
+     }
+    }
